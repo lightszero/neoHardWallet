@@ -1,0 +1,301 @@
+{
+  "version": 2,
+  "targets": {
+    ".NETFramework,Version=v4.6.2": {
+      "Microsoft.Owin/3.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Owin": "1.0.0"
+        },
+        "compile": {
+          "lib/net45/Microsoft.Owin.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Microsoft.Owin.dll": {}
+        }
+      },
+      "Microsoft.Owin.Host.HttpListener/3.1.0": {
+        "type": "package",
+        "compile": {
+          "lib/net45/Microsoft.Owin.Host.HttpListener.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Microsoft.Owin.Host.HttpListener.dll": {}
+        }
+      },
+      "Microsoft.Owin.Hosting/3.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Owin": "3.1.0",
+          "Owin": "1.0.0"
+        },
+        "compile": {
+          "lib/net45/Microsoft.Owin.Hosting.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Microsoft.Owin.Hosting.dll": {}
+        }
+      },
+      "Owin/1.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net40/Owin.dll": {}
+        },
+        "runtime": {
+          "lib/net40/Owin.dll": {}
+        }
+      }
+    },
+    ".NETFramework,Version=v4.6.2/win": {
+      "Microsoft.Owin/3.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Owin": "1.0.0"
+        },
+        "compile": {
+          "lib/net45/Microsoft.Owin.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Microsoft.Owin.dll": {}
+        }
+      },
+      "Microsoft.Owin.Host.HttpListener/3.1.0": {
+        "type": "package",
+        "compile": {
+          "lib/net45/Microsoft.Owin.Host.HttpListener.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Microsoft.Owin.Host.HttpListener.dll": {}
+        }
+      },
+      "Microsoft.Owin.Hosting/3.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Owin": "3.1.0",
+          "Owin": "1.0.0"
+        },
+        "compile": {
+          "lib/net45/Microsoft.Owin.Hosting.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Microsoft.Owin.Hosting.dll": {}
+        }
+      },
+      "Owin/1.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net40/Owin.dll": {}
+        },
+        "runtime": {
+          "lib/net40/Owin.dll": {}
+        }
+      }
+    },
+    ".NETFramework,Version=v4.6.2/win-x64": {
+      "Microsoft.Owin/3.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Owin": "1.0.0"
+        },
+        "compile": {
+          "lib/net45/Microsoft.Owin.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Microsoft.Owin.dll": {}
+        }
+      },
+      "Microsoft.Owin.Host.HttpListener/3.1.0": {
+        "type": "package",
+        "compile": {
+          "lib/net45/Microsoft.Owin.Host.HttpListener.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Microsoft.Owin.Host.HttpListener.dll": {}
+        }
+      },
+      "Microsoft.Owin.Hosting/3.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Owin": "3.1.0",
+          "Owin": "1.0.0"
+        },
+        "compile": {
+          "lib/net45/Microsoft.Owin.Hosting.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Microsoft.Owin.Hosting.dll": {}
+        }
+      },
+      "Owin/1.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net40/Owin.dll": {}
+        },
+        "runtime": {
+          "lib/net40/Owin.dll": {}
+        }
+      }
+    },
+    ".NETFramework,Version=v4.6.2/win-x86": {
+      "Microsoft.Owin/3.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Owin": "1.0.0"
+        },
+        "compile": {
+          "lib/net45/Microsoft.Owin.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Microsoft.Owin.dll": {}
+        }
+      },
+      "Microsoft.Owin.Host.HttpListener/3.1.0": {
+        "type": "package",
+        "compile": {
+          "lib/net45/Microsoft.Owin.Host.HttpListener.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Microsoft.Owin.Host.HttpListener.dll": {}
+        }
+      },
+      "Microsoft.Owin.Hosting/3.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Owin": "3.1.0",
+          "Owin": "1.0.0"
+        },
+        "compile": {
+          "lib/net45/Microsoft.Owin.Hosting.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Microsoft.Owin.Hosting.dll": {}
+        }
+      },
+      "Owin/1.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net40/Owin.dll": {}
+        },
+        "runtime": {
+          "lib/net40/Owin.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Microsoft.Owin/3.1.0": {
+      "sha512": "dtDln3a84XlfPRyFNLfbqAxfoK5dFC7sH9E78KNZnRHXOEdelEBOczrUFkYG0h/+qfM7NlwBKEul5dZeVTY2gA==",
+      "type": "package",
+      "path": "microsoft.owin/3.1.0",
+      "files": [
+        "Microsoft.Owin.3.1.0.nupkg.sha512",
+        "Microsoft.Owin.nuspec",
+        "lib/net45/Microsoft.Owin.XML",
+        "lib/net45/Microsoft.Owin.dll"
+      ]
+    },
+    "Microsoft.Owin.Host.HttpListener/3.1.0": {
+      "sha512": "PmLjL7dytVKsFkPSpJLZIGwBny2BrmbEUusngHG77SKZ8Kd2kHkdwThIuucnsa5ry7z+xtYAoTaOcq0u4iwfgA==",
+      "type": "package",
+      "path": "microsoft.owin.host.httplistener/3.1.0",
+      "files": [
+        "Microsoft.Owin.Host.HttpListener.3.1.0.nupkg.sha512",
+        "Microsoft.Owin.Host.HttpListener.nuspec",
+        "lib/net45/Microsoft.Owin.Host.HttpListener.dll",
+        "lib/net45/Microsoft.Owin.Host.HttpListener.xml"
+      ]
+    },
+    "Microsoft.Owin.Hosting/3.1.0": {
+      "sha512": "TztzEs0Qz8tC6Oc3vNeWIPof7puhICNAzTbGEhqxDELXU2rWWnXjnZEPWAeXbK5rxj+MCoVIq76pRIGGGjD7HQ==",
+      "type": "package",
+      "path": "microsoft.owin.hosting/3.1.0",
+      "files": [
+        "Microsoft.Owin.Hosting.3.1.0.nupkg.sha512",
+        "Microsoft.Owin.Hosting.nuspec",
+        "lib/net45/Microsoft.Owin.Hosting.XML",
+        "lib/net45/Microsoft.Owin.Hosting.dll"
+      ]
+    },
+    "Owin/1.0.0": {
+      "sha512": "OseTFniKmyp76mEzOBwIKGBRS5eMoYNkMKaMXOpxx9jv88+b6mh1rSaw43vjBOItNhaLFG3d0a20PfHyibH5sw==",
+      "type": "package",
+      "path": "owin/1.0.0",
+      "files": [
+        "Owin.1.0.0.nupkg.sha512",
+        "Owin.nuspec",
+        "lib/net40/Owin.dll"
+      ]
+    }
+  },
+  "projectFileDependencyGroups": {
+    ".NETFramework,Version=v4.6.2": [
+      "Microsoft.Owin >= 3.1.0",
+      "Microsoft.Owin.Host.HttpListener >= 3.1.0",
+      "Microsoft.Owin.Hosting >= 3.1.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\light\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "D:\\git\\neo\\neoHardWallet\\driver\\driver.csproj",
+      "projectName": "driver",
+      "projectPath": "D:\\git\\neo\\neoHardWallet\\driver\\driver.csproj",
+      "outputPath": "D:\\git\\neo\\neoHardWallet\\driver\\obj\\",
+      "projectStyle": "PackageReference",
+      "originalTargetFrameworks": [
+        "net462"
+      ],
+      "frameworks": {
+        "net462": {
+          "projectReferences": {}
+        }
+      }
+    },
+    "dependencies": {
+      "Microsoft.Owin": {
+        "target": "Package",
+        "version": "3.1.0"
+      },
+      "Microsoft.Owin.Host.HttpListener": {
+        "target": "Package",
+        "version": "3.1.0"
+      },
+      "Microsoft.Owin.Hosting": {
+        "target": "Package",
+        "version": "3.1.0"
+      }
+    },
+    "frameworks": {
+      "net462": {
+        "dependencies": {
+          "Microsoft.Owin": {
+            "target": "Package",
+            "version": "3.1.0"
+          },
+          "Microsoft.Owin.Host.HttpListener": {
+            "target": "Package",
+            "version": "3.1.0"
+          },
+          "Microsoft.Owin.Hosting": {
+            "target": "Package",
+            "version": "3.1.0"
+          }
+        }
+      }
+    },
+    "runtimes": {
+      "win": {
+        "#import": []
+      },
+      "win-x64": {
+        "#import": []
+      },
+      "win-x86": {
+        "#import": []
+      }
+    }
+  }
+}
