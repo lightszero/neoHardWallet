@@ -19,7 +19,8 @@ namespace driver
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Minimized;
+            //this.WindowState = FormWindowState.Minimized;
+            hhgate.CustomServer.BeginServer();
         }
         protected override void WndProc(ref Message m)
         {
@@ -47,5 +48,33 @@ namespace driver
         }
 
 
+        public static string publicKey_NoComp ="";
+        public static byte[] privateKey;
+        public static byte[] publicKey;
+        public static string address ="";
+        private void buttonWif_Click(object sender, EventArgs e)
+        {
+            //导入WIF
+            try
+            {
+                var txt = this.textWIF.Text;
+                var bytes_PrivateKey = NEO.AllianceOfThinWallet.Cryptography.Helper.GetPrivateKeyFromWIF(txt);
+                var bytes_PublicKey = NEO.AllianceOfThinWallet.Cryptography.Helper.GetPublicKeyFromPrivateKey(bytes_PrivateKey);
+                publicKey_NoComp = NEO.AllianceOfThinWallet.Cryptography.Helper.Bytes2HexString(NEO.AllianceOfThinWallet.Cryptography.Helper.GetPublicKeyFromPrivateKey_NoComp(bytes_PrivateKey));
+                var bytes_PublicKeyHash = NEO.AllianceOfThinWallet.Cryptography.Helper.GetPublicKeyHash(bytes_PublicKey);
+                address = NEO.AllianceOfThinWallet.Cryptography.Helper.GetAddressFromPublicKey(bytes_PublicKey);
+                privateKey = bytes_PrivateKey;
+                publicKey = bytes_PublicKey;
+            }
+            catch
+            {
+                address = "";
+                MessageBox.Show("导入WIF错误");
+            }
+            this.labelWif.Visible = false;
+            this.textWIF.Visible = false;
+            this.buttonWif.Visible = false;
+            this.labelAccount.Text = address;
+        }
     }
 }

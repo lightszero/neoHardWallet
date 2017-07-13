@@ -21,6 +21,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -38,6 +39,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Numerics" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -60,9 +62,17 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="server\Cmd.cs" />
     <Compile Include="server\FormData.cs" />
+    <Compile Include="server\SignMachine.cs" />
     <Compile Include="server\HHGate.cs" />
     <Compile Include="server\Server.cs" />
     <Compile Include="server\StaticFile.cs" />
+    <Compile Include="thinsdk\base58.cs" />
+    <Compile Include="thinsdk\ECC\ECCurve.cs" />
+    <Compile Include="thinsdk\ECC\ECFieldElement.cs" />
+    <Compile Include="thinsdk\ECC\ECPoint.cs" />
+    <Compile Include="thinsdk\Helper.cs" />
+    <Compile Include="thinsdk\MyJson.cs" />
+    <Compile Include="thinsdk\RIPEMD160Managed.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
