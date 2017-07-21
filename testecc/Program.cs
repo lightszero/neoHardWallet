@@ -83,6 +83,9 @@ namespace testecc
                 using (System.Security.Cryptography.ECDsaCng ecdsa = new System.Security.Cryptography.ECDsaCng(key))
                 {
                     Console.WriteLine("验证签名结果=" + ecdsa.VerifyData(srcdata, signdata));
+
+                    var hashsrc = sha256.ComputeHash(srcdata);
+                    Console.WriteLine("验证签名结果2=" + ecdsa.VerifyHash(hashsrc, signdata));
                 }
             }
             Console.WriteLine("回车继续");
