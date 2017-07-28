@@ -58,6 +58,11 @@ namespace driver_win
             if (USBHIDDriver.IsActive())
                 USBHIDDriver.Send("abc");
         }
+
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            USBHIDDriver.StopRead();//不停止读取，有个线程一直卡着的
+        }
     }
 
 
