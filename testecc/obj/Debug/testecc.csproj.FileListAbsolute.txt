@@ -1,0 +1,6 @@
+D:\git\neo\neoHardWallet\testecc\bin\Debug\testecc.exe
+D:\git\neo\neoHardWallet\testecc\bin\Debug\testecc.pdb
+D:\git\neo\neoHardWallet\testecc\obj\Debug\testecc.csprojResolveAssemblyReference.cache
+D:\git\neo\neoHardWallet\testecc\obj\Debug\testecc.exe
+D:\git\neo\neoHardWallet\testecc\obj\Debug\testecc.pdb
+D:\git\neo\neoHardWallet\testecc\bin\Debug\testecc.exe.config
