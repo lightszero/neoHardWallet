@@ -39,12 +39,12 @@ namespace driver_win
                  {
                      if(bs[1]==0x31)
                      {
-                         this.list1.Items.Add("同意交易");
+                         this.list1.Items.Insert(0, "同意交易" + DateTime.Now.ToString());
+
                      }
                      else
                      {
-                         this.list1.Items.Add("拒绝交易");
-
+                         this.list1.Items.Insert(0, "拒绝交易" + DateTime.Now.ToString());
                      }
 
                  };
