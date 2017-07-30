@@ -325,7 +325,7 @@ namespace NeoDun
         {
             byte[] sha = SignTool.ComputeSHA256(data, 0, data.Length);
             string key = SignTool.Hex2String(sha, 0, sha.Length);
-            datapool[key] = sha;
+            datapool[key] = data;
             Message msg = new Message();
             msg.tag1 = 0x01; //0字节 
             msg.tag2 = 0x01; //1字节
