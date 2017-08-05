@@ -320,6 +320,10 @@ namespace NeoDun
             //crc会在sendmsg 自动发送
             msgForSend.Enqueue(msg);
         }
+        public void SendDirect(byte[] data)
+        {
+
+        }
         //发送包
         public void SendPackage(byte[] data)
         {

@@ -86,6 +86,15 @@ namespace driver_win
         {//clear
             this.list1.Items.Clear();
         }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            var data= new byte[] { 0x01, 0x02 };
+            if (USBHIDDriver.IsActive())
+            {
+                USBHIDDriver.Send(data);
+            }
+        }
     }
 
 
