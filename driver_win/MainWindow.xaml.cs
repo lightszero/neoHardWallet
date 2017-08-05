@@ -28,10 +28,10 @@ namespace driver_win
         NeoDun.Signer signer = new NeoDun.Signer();
         private void Window_Activated(object sender, EventArgs e)
         {
-            //System.Windows.Threading.DispatcherTimer timer = new System.Windows.Threading.DispatcherTimer(TimeSpan.FromSeconds(1.0), System.Windows.Threading.DispatcherPriority.Normal, (s, e1) =>
-            //  {
-            //      this.CheckDevice();
-            //  }, this.Dispatcher);
+            System.Windows.Threading.DispatcherTimer timer = new System.Windows.Threading.DispatcherTimer(TimeSpan.FromSeconds(1.0), System.Windows.Threading.DispatcherPriority.Normal, (s, e1) =>
+              {
+                  this.CheckDevice();
+              }, this.Dispatcher);
 
             CheckDevice();
             signer.Start(onRecvMsg,onSendMsg);

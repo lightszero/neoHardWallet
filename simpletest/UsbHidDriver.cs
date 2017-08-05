@@ -93,6 +93,9 @@ class USBHIDDriver
     {
         try
         {
+            byte[] outb = new byte[atcdevice.MaxOutputReportLength];
+            outb[0] = 0;//fix hiddriver
+            Array.Copy(bs, 0, outb, 1, Math.Min(bs.Length, outb.Length - 1));
             stream.Write(bs);
             return true;
         }
@@ -111,8 +114,9 @@ class USBHIDDriver
     public static bool Send(string str)
     {
         byte[] outb = new byte[atcdevice.MaxOutputReportLength];
+        outb[0] = 0;
         var bs = System.Text.Encoding.UTF8.GetBytes(str);
-        Array.Copy(bs, 0, outb, 0, Math.Min(bs.Length, outb.Length));
+        Array.Copy(bs, 0, outb, 1, Math.Min(bs.Length, outb.Length-1));
         return Send(outb);
     }
 
