@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "driver_win", "driver_win\dr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HidSharp", "HidSharp\HidSharp.csproj", "{0DB86674-2A7B-4BDC-93C1-3F7DC771426C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "simpletest", "simpletest\simpletest.csproj", "{F184CFDF-FB0D-4ECA-B49C-560B94F8CA8F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{0DB86674-2A7B-4BDC-93C1-3F7DC771426C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0DB86674-2A7B-4BDC-93C1-3F7DC771426C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0DB86674-2A7B-4BDC-93C1-3F7DC771426C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F184CFDF-FB0D-4ECA-B49C-560B94F8CA8F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F184CFDF-FB0D-4ECA-B49C-560B94F8CA8F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F184CFDF-FB0D-4ECA-B49C-560B94F8CA8F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F184CFDF-FB0D-4ECA-B49C-560B94F8CA8F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
