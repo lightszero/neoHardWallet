@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NEO.AllianceOfThinWallet.Cryptography;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,9 +11,16 @@ namespace test_parseTransfer
         static void Main(string[] args)
         {
             string src = "80000002235fc72a3372fa601d39017685c3a77ebb24f1369a16e80f218f5ff76880fb3800005d1ab60715d73e806cca1449fc089520211360ea526450803345e8987ad35e76010002e72d286979ee6cb1b7e65dfddfb2e384100b8d148e7758de42e4168b71792c60008b585a170000001b02c180df019e6113a985411cae62db80f90db4e72d286979ee6cb1b7e65dfddfb2e384100b8d148e7758de42e4168b71792c6070222f1817000000738679b1fd7dbc21fa7ebc1218e74f08e6afbdae";
+            string src2 = "800000010c8fa242aaf7461f802bf0d6e0fc8694e3daed2d66de4dc70fe017012d075350010002e72d286979ee6cb1b7e65dfddfb2e384100b8d148e7758de42e4168b71792c6080969800000000001b02c180df019e6113a985411cae62db80f90db4e72d286979ee6cb1b7e65dfddfb2e384100b8d148e7758de42e4168b71792c607098df2817000000738679b1fd7dbc21fa7ebc1218e74f08e6afbdae";
+
             var bytes = HexString2Bytes(src);
-            Console.WriteLine("parse bytes:" + src + "  len=" + bytes.Length);
+            Console.WriteLine("=====parse bytes:" + src + "  len=" + bytes.Length);
             ParseTransforData(bytes);
+
+
+            var bytes2 = HexString2Bytes(src2);
+            Console.WriteLine("=====parse bytes:" + src2 + "  len=" + bytes.Length);
+            ParseTransforData(bytes2);
             Console.ReadLine();
         }
         public static void ParseTransforData(byte[] data)
@@ -84,7 +92,7 @@ namespace test_parseTransfer
                     throw new FormatException();
             }
 
-            //inputs
+            //inputs  输入表示基于哪些交易
             var countInputs = readVarInt(ms);
             Console.WriteLine("countInputs:" + countInputs);
             for (UInt64 i = 0; i < countInputs; i++)
@@ -99,7 +107,9 @@ namespace test_parseTransfer
                 Console.WriteLine("   input:" + strhash + "   index:" + index);
             }
 
-            //outputes
+            //outputes 输出表示最后有哪几个地址得到多少钱，肯定有一个是自己的地址,因为每笔交易都会把之前交易的余额清空,刨除自己,就是要转给谁多少钱
+
+            //这个机制叫做UTXO
             var countOutputs = readVarInt(ms);
             Console.WriteLine("countOutputs:" + countOutputs);
             for (UInt64 i = 0; i < countOutputs; i++)
@@ -121,10 +131,12 @@ namespace test_parseTransfer
                 //资产数量
 
                 var scripthash = new byte[20];
+
                 ms.Read(scripthash, 0, 20);
-                scripthash = scripthash.Reverse().ToArray();//反转
+                var address = GetAddressFromScriptHash(scripthash);
                 Console.WriteLine("   output"+i+":" + Bytes2HexString(assetid) + "=" + number);
-                Console.WriteLine("       scripthash:" + Bytes2HexString(scripthash));
+
+                Console.WriteLine("       address:" + address);
             }
         }
         public static UInt64 readVarInt(System.IO.Stream stream, UInt64 max = 9007199254740991)
@@ -267,6 +279,20 @@ namespace test_parseTransfer
                 sb.Append(d.ToString("x02"));
             }
             return sb.ToString();
+        }
+        static System.Security.Cryptography.SHA256 sha256 = System.Security.Cryptography.SHA256.Create();
+
+        public static string GetAddressFromScriptHash(byte[] scripthash)
+        {
+            byte[] data = new byte[scripthash.Length + 1];
+            data[0] = 0x17;
+            Array.Copy(scripthash, 0, data, 1, scripthash.Length);
+            var hash = sha256.ComputeHash(data);
+            hash = sha256.ComputeHash(hash);
+
+            var alldata = data.Concat(hash.Take(4)).ToArray();
+
+            return Base58.Encode(alldata);
         }
     }
 }

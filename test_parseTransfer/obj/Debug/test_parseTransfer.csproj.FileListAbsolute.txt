@@ -1,5 +1,4 @@
 D:\git\neo\neoHardWallet\test_parseTransfer\bin\Debug\test_parseTransfer.exe
 D:\git\neo\neoHardWallet\test_parseTransfer\bin\Debug\test_parseTransfer.pdb
-D:\git\neo\neoHardWallet\test_parseTransfer\obj\Debug\test_parseTransfer.csprojResolveAssemblyReference.cache
 D:\git\neo\neoHardWallet\test_parseTransfer\obj\Debug\test_parseTransfer.exe
 D:\git\neo\neoHardWallet\test_parseTransfer\obj\Debug\test_parseTransfer.pdb
